@@ -1,24 +1,24 @@
 import tkinter as tk
 from tkinter import messagebox
 
-# Data
+# Options
 options = ["Espresso", "Americano", "Latte", "Cappuccino", "Macchiato", "Mocha", "Flat White"]
 options_price = [2.5, 3, 2.5, 3, 2.5, 3.5, 2.5]
 
 sizes = ["Medium", "Large", "Xl"]
 sizes_price = [0, 1, 1.5]
 
-# Variables to store user choices
+# Variables to store choices
 selected_option = None
 selected_size = None
 eat_in = None
 
-# Create main window
+# main window
 root = tk.Tk()
 root.title("Order Menu")
 root.geometry("300x300")
 
-# Screen functions
+# functions
 def show_type_screen():
     for widget in root.winfo_children():
         widget.destroy()
