@@ -12,7 +12,7 @@ while True:
 
 #Sizes
 Sizes = ["Medium", "Large", "Xl"]
-Sizes_Price = [0, 1, 1.5]\
+Sizes_Price = [0, 1, 1.5]
 
 while True:
     try:
