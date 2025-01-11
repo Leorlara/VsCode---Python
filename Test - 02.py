@@ -4,7 +4,7 @@ Options_Price = [2.5, 3, 2.5, 3, 2.5, 3.5, 2.5]
 
 while True:
     try:
-        Index_type = Options.index(input("What would you like to order? "))
+        Index_type = Options.index(input("What would you like to order? ").strip().title())
         Price_Type= Options_Price[Index_type]
         break
     except ValueError:
@@ -16,7 +16,7 @@ Sizes_Price = [0, 1, 1.5]\
 
 while True:
     try:
-        Index_Size= Sizes.index(input("What size would you like? "))
+        Index_Size= Sizes.index(input("What size would you like? ").strip().title())
         Price_Size= Sizes_Price[Index_Size]
         break
     except ValueError:
@@ -24,7 +24,7 @@ while True:
 
 #Eat nt or take away
 while True:
-    Eat = (input("Would you like to eat in or take away? Here/Away "))
+    Eat = (input("Would you like to eat in or take away? Here/Away ").strip().title())
     if Eat == "Here" or Eat == "Away":
         break
     else:
