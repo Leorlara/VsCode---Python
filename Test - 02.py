@@ -22,7 +22,7 @@ while True:
     except ValueError:
         print("Sorry, we don't have that option or a typo was made. Please try again.")
 
-#Eat it or take away
+#Eat nt or take away
 while True:
     Eat = (input("Would you like to eat in or take away? Here/Away "))
     if Eat == "Here" or Eat == "Away":
@@ -30,7 +30,7 @@ while True:
     else:
         print("Sorry, we don't have that option or a typo was made. Please try again.")
 
-#Final Calculations
+#Final Price
 if Eat == "Away":
     Final_price = Price_Type+Price_Size+1
 else:
