@@ -22,7 +22,17 @@ while True:
     except ValueError:
         print("Sorry, an error occurred. Please try again.")
         
-
+while True:
+    try:
+        Number_of_scoops = int(input("How many scoops would you like? Minimum of 1 and maximum of 4 "))
+        if Number_of_scoops < 1 or Number_of_scoops > 4:
+            print("Sorry, you can only select between 1 and 4 scoops. Please try again.")
+            continue  # Skip confirmation and prompt for input again
+        Confirmation_Scoops = input(f"You selected {Number_of_scoops} scoops. Is that correct? (yes/no): ").strip().title()
+        if Confirmation_Scoops == "Yes":
+            break
+    except ValueError:
+        print("Sorry, an error occurred. Please try again.")    
 
 while True:
     try:
@@ -49,7 +59,7 @@ while True:
         print("An unexpected error occurred. Please try again.")
 
 # Final result
-final_price = Price_Container + total_toppings_price
+final_price = Price_Container + total_toppings_price + Number_of_scoops
 print("You selected the following toppings:")
 print(", ".join(selected_toppings) if selected_toppings else "No toppings")
 print(f"Total price for toppings: ${total_toppings_price:.2f}")
