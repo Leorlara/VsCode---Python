@@ -30,7 +30,7 @@ while True:
             print(f"Available toppings: {', '.join(Toppings)}")
             user_input = input("What topping would you like? Type 'done' when finished: ").strip().title()
             
-            if user_input == "Done":
+            if user_input == "Done" or not Toppings:  # Exit
                 break
             
             if user_input in Toppings:  # Valid topping
@@ -41,10 +41,6 @@ while True:
                 print(f"Added {user_input} for ${Price_Toppings:.2f}.")
                 Toppings.remove(user_input)
                 Toppings_price.remove(Price_Toppings)
-                if Toppings == []:
-                    print("All toppings have been selected.")
-                    break
-
             else:
                 print("Sorry, we don't have that topping option. Please try again.")
         
